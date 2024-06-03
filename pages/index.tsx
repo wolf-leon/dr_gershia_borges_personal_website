@@ -114,7 +114,7 @@ export default function IndexPage() {
               radius: "full",
               variant: "shadow",
             })}
-            href="/services"
+            href="/learn_and_care"
           >
             View All Services
           </Link>
@@ -125,7 +125,25 @@ export default function IndexPage() {
       {/* Section 3 */}
 
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <Table aria-label="Example table with dynamic content">
+        <div className="max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-pink-500">Connect and Book Appointment</h2>
+          <br />
+        </div>
+      </section>
+      <hr className="my-8 border-gray-300" />
+
+      {/* Section 4 */}
+
+      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Open Consultation Hours</h2>
+      <p className="text-lg text-center mt-5">
+        {siteConfig.nav_logo_name_small_devices} offers open consultation hours for patients seeking medical advice or treatment. 
+        Whether you need a routine check-up or have specific health concerns, She is available to provide personalized care and support. 
+        </p>
+        <p className="text-lg text-center mt-5">Feel free to schedule an appointment or visit during the specified consultation hours.
+      </p>
+      <br />
+      <Table className="mx-auto" aria-label="Example table with dynamic content">
       <TableHeader columns={columns}>
         {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
       </TableHeader>
