@@ -104,9 +104,9 @@ export default function IndexPage() {
 
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-pink-500">Care - Gynecology & pregnancy</h2>
+          <h2 className="text-3xl font-bold text-pink-500">Care - Gynecology and pregnancy</h2>
           <br />
-          <p className="text-lg">Woman's health undergoes myriad changes throughout her life journey. Dr. Gershia Borges, an esteemed female Gynecologist & Obstetrician, brings forth her seasoned expertise. With a comprehensive approach, she extends a spectrum of obstetric, gynecologic, and pregnancy care services, tailored to meet the diverse needs of women at every stage of their lives.</p>
+          <p className="text-lg">Woman&apos;s health undergoes myriad changes throughout her life journey. Dr. Gershia Borges, an esteemed female Gynecologist and Obstetrician, brings forth her seasoned expertise. With a comprehensive approach, she extends a spectrum of obstetric, gynecologic, and pregnancy care services, tailored to meet the diverse needs of women at every stage of their lives.</p>
           <br />
           <Link
             className={buttonStyles({
