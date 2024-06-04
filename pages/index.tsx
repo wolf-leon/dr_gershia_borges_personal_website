@@ -1,8 +1,10 @@
-import { Link, Snippet, Code, button as buttonStyles } from "@nextui-org/react";
+import { Link, Card, CardHeader, Button,CardBody, CardFooter,Snippet,Image, Divider,button as buttonStyles } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import {  Table,  TableHeader,  TableBody,  TableColumn,  TableRow,  TableCell,getKeyValue} from "@nextui-org/table";
 import DefaultLayout from "@/layouts/default";
+import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
+
 const rows = [
   {
     key: "1",
@@ -80,25 +82,13 @@ export default function IndexPage() {
               - wonder, hope, a dream of possibilities.
             </h4>
             <br />
-            <div className="flex justify-center md:justify-start">
-          <Link
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href="/doctor"
-          >
-            View {siteConfig.nav_logo_name_small_devices} Profile
-          </Link>
-        </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
             <img src="/pregnancy_picture-2.jpg" alt="Baby" className="w-full h-auto max-w-sm rounded-lg" />
           </div>
         </div>
       </section>
-      <hr className="my-8 border-gray-300" />
+      <Divider className="my-4" />
 
       {/* Section 2 */}
 
@@ -120,17 +110,45 @@ export default function IndexPage() {
           </Link>
         </div>
       </section>
-      <hr className="my-8 border-gray-300" />
+      <Divider className="my-4" />
 
       {/* Section 3 */}
 
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-pink-500">Connect and Book Appointment</h2>
+          <h2 className="text-3xl font-bold text-pink-500">Book Appointment</h2>
           <br />
+          <p className="text-lg text-center mt-5">
+        For private visits or consultations, please connect with {siteConfig.nav_logo_name_small_devices} and make sure to have an appointment beforehand to avoid any inconvenience.</p>
+        <p className="text-lg text-center mt-5">In times of medical emergency, contact via mobile or WhatsApp for a fast response.
+      </p>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-20">
+          <div className="flex flex-col items-center p-4 md:p-6">
+            <FaWhatsapp style={{ color: '#25D366', fontSize: '3rem' }} />
+            <Link
+              className={buttonStyles({
+                color: "success",
+                radius: "full",
+                variant: "shadow",
+                className: "mt-4 md:mt-6"
+              })}
+              href={siteConfig.links.whatsapp}
+            >
+              Whatsapp Message
+            </Link>
+          </div>
+          <div className="flex flex-col items-center p-4 md:p-6">
+            <FaPhone style={{ color: '#87CEEB', fontSize: '3rem' }} />
+            <Snippet hideSymbol className="mt-4 md:mt-6">{siteConfig.links.mobile}</Snippet>
+          </div>
+          <div className="flex flex-col items-center p-4 md:p-6">
+            <FaEnvelope style={{ color: '#d3d3d3', fontSize: '3rem' }} />
+            <Snippet hideSymbol variant="bordered" className="mt-4 md:mt-6">{siteConfig.links.email}</Snippet>
+          </div>
         </div>
       </section>
-      <hr className="my-8 border-gray-300" />
+      <Divider className="my-4" />
 
       {/* Section 4 */}
 
@@ -156,8 +174,119 @@ export default function IndexPage() {
       </TableBody>
     </Table>
       </section>
-      <hr className="my-8 border-gray-300" />
-      
+      <Divider className="my-4" />
+
+      {/* Section 5 */}
+
+      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">{siteConfig.nav_logo_name}</h2>
+      <br />
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
+          <div className="md:w-1/2 flex justify-center">
+            <img src="Dr.-Gershia-2.jpg" alt="Dr.-Gershia" className="w-full h-auto max-w-sm rounded-lg" />
+          </div>
+
+          <div className="text-center md:text-left md:w-1/2">
+            <p className="text-lg text-center mt-5">
+            {siteConfig.nav_logo_name_small_devices} is a full-time Obstetrician and Gynaecologist, holding an MS in Obstetrics and Gynaecology from St. John&apos;s Medical College, Bangalore.</p>
+            <p className="text-lg text-center mt-5">Specializing in high-risk obstetrics and gynaecological disorders, She leverages her experience and exceptional skills to provide transformative care and guidance. She has impacted the lives of countless patients with her dedicated and compassionate approach.
+            </p>
+            <br />
+            <div className="flex items-center justify-center md:justify-center">
+              <Link
+                className={buttonStyles({
+                  color: "primary",
+                  radius: "full",
+                  variant: "shadow",
+                })}
+                href="/doctor"
+              >
+                View {siteConfig.nav_logo_name_small_devices} Profile
+              </Link>
+            </div>
+          </div>
+      </div>
+      </section>
+      <Divider className="my-4" />
+
+      {/* Testimonials Section 6*/}
+      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Patient Testimonials</h2>
+      <br />
+      <div className="max-w-[900px] flex flex-wrap justify-center gap-7">
+        <Card className="h-auto w-full sm:w-auto md:w-[calc(33%-16px)]">
+          <CardBody className="p-4">
+            <p className="text-lg font-semibold text-gray-800">{siteConfig.card_testimonial_data.client1_name}</p>
+            <p className="text-base text-gray-600 mt-2">
+            &quot;{siteConfig.card_testimonial_data.client1_testimonial}&quot;
+            </p>
+          </CardBody>
+        </Card>
+        <Card className="h-auto w-full sm:w-auto md:w-[calc(33%-16px)]">
+          <CardBody className="p-4">
+            <p className="text-lg font-semibold text-gray-800">{siteConfig.card_testimonial_data.client2_name}</p>
+            <p className="text-base text-gray-600 mt-2">
+            &quot;{siteConfig.card_testimonial_data.client2_testimonial}&quot;
+            </p>
+          </CardBody>
+        </Card>
+        <Card className="h-auto w-full sm:w-auto md:w-[calc(33%-16px)]">
+          <CardBody className="p-4">
+            <p className="text-lg font-semibold text-gray-800">{siteConfig.card_testimonial_data.client3_name}</p>
+            <p className="text-base text-gray-600 mt-2">
+            &quot;{siteConfig.card_testimonial_data.client3_testimonial}&quot;
+            </p>
+          </CardBody>
+        </Card>
+      </div>
+    </section>
+      <Divider className="my-4" />
+
+
+    {/* Section 7 */}
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Learning about Gynecology and Women&apos;s Health</h2>
+      <br />
+      <div className="max-w-[900px] flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img src="/pregnancy_picture-3.jpg" alt="Gynecology_Baby_Image" className="w-auto h-64 md:h-auto max-w-md object-cover rounded-lg" />
+        </div>
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
+          <p className="text-lg text-center mt-5">
+            Our mission is to educate and empower girls, women, and individuals of all genders about female health. We believe that knowledge is key to promoting overall well-being and preventing health issues.
+          </p>
+          <p className="text-lg text-center mt-5">
+            Explore our resources and learn about various aspects of gynecology, pregnancy, reproductive health, and more.
+          </p>
+          <div className="flex flex-col md:flex-row mt-6 gap-4 md:gap-8">
+            <div className="flex items-center justify-center md:justify-center">
+              <Link
+                className={buttonStyles({
+                  color: "primary",
+                  radius: "full",
+                  variant: "bordered",
+                })}
+                href="/blog"
+              >
+                Read Blog
+              </Link>
+            </div>
+            <div className="flex items-center justify-center md:justify-center">
+              <Link
+                className={buttonStyles({
+                  color: "primary",
+                  radius: "full",
+                  variant: "bordered",
+                })}
+                href="/learn_and_care"
+              >
+                Learn and care Information
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     </DefaultLayout>
   );
