@@ -247,11 +247,11 @@ export default function IndexPage() {
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Learning about Gynecology and Women&apos;s Health</h2>
       <br />
-      <div className="max-w-[900px] flex flex-col md:flex-row items-center justify-center gap-8">
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img src="/pregnancy_picture-3.jpg" alt="Gynecology_Baby_Image" className="w-auto h-64 md:h-auto max-w-md object-cover rounded-lg" />
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
+        <div className="md:w-1/2 flex justify-center">
+          <img src="/pregnancy_picture-3.jpg" alt="Gynecology_Baby_Image" className="w-full h-auto max-w-sm rounded-lg" />
         </div>
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
+        <div className="md:w-1/2 flex flex-col items-center justify-center">
           <p className="text-lg text-center mt-5">
             Our mission is to educate and empower girls, women, and individuals of all genders about female health. We believe that knowledge is key to promoting overall well-being and preventing health issues.
           </p>
