@@ -23,10 +23,10 @@ export default function DefaultLayout({
         <nav style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', marginBottom: '20px', padding: '0 20px', flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: '#333', textDecoration: 'none' }}>Home</Link>
           <Link href="/learn_and_care" style={{ color: '#333', textDecoration: 'none' }}>Learn and Care</Link>
-          <Link href="/doctor" style={{ color: '#333', textDecoration: 'none' }}>Doctor</Link>
+          <Link href="/doctor-gershia-borges" style={{ color: '#333', textDecoration: 'none' }}>Doctor</Link>
           <Link href="/blog" style={{ color: '#333', textDecoration: 'none' }}>Blog</Link>
           <Link href="/about" style={{ color: '#333', textDecoration: 'none' }}>About</Link>
-          <Link href="/contact" style={{ color: '#333', textDecoration: 'none' }}>Contact</Link>
+          <Link href="/faqs" style={{ color: '#333', textDecoration: 'none' }}>FAQs</Link>
         </nav>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '20px' }}>
           <Link href={siteConfig.links.whatsapp} style={{ color: '#333' }}><FaWhatsapp /></Link>

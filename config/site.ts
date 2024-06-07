@@ -16,7 +16,7 @@ export const siteConfig = {
     },
     {
       label: "Doctor",
-      href: "/doctor",
+      href: "/doctor-gershia-borges",
     },
     {
       label: "Blog",
@@ -42,7 +42,7 @@ export const siteConfig = {
     },
     {
       label: "Doctor",
-      href: "/doctor",
+      href: "/doctor-gershia-borges",
     },
     {
       label: "Blog",

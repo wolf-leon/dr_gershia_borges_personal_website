@@ -1,4 +1,4 @@
-import { Link, Card, CardHeader, Button,CardBody, CardFooter,Snippet,Image, Divider,button as buttonStyles } from "@nextui-org/react";
+import { Link, Card,CardBody,Snippet, Divider,button as buttonStyles } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import {  Table,  TableHeader,  TableBody,  TableColumn,  TableRow,  TableCell,getKeyValue} from "@nextui-org/table";
@@ -104,7 +104,7 @@ export default function IndexPage() {
               radius: "full",
               variant: "shadow",
             })}
-            href="/learn_and_care"
+            href="/doctor-gershia-borges"
           >
             View All Services
           </Link>
@@ -163,12 +163,12 @@ export default function IndexPage() {
       <br />
       <Table className="mx-auto" aria-label="Example table with dynamic content">
       <TableHeader columns={columns}>
-        {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
+        {(column) => <TableColumn key={column.key} className="text-center">{column.label}</TableColumn>}
       </TableHeader>
       <TableBody items={rows}>
         {(item) => (
           <TableRow key={item.key}>
-            {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
+            {(columnKey) => <TableCell className="text-center">{getKeyValue(item, columnKey)}</TableCell>}
           </TableRow>
         )}
       </TableBody>
@@ -199,7 +199,7 @@ export default function IndexPage() {
                   radius: "full",
                   variant: "shadow",
                 })}
-                href="/doctor"
+                href="/doctor-gershia-borges"
               >
                 View {siteConfig.nav_logo_name_small_devices} Profile
               </Link>
