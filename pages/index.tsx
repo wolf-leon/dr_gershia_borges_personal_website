@@ -1,9 +1,30 @@
+"use client";
 import { Link, Card,CardBody,Snippet, Divider,button as buttonStyles } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import {  Table,  TableHeader,  TableBody,  TableColumn,  TableRow,  TableCell,getKeyValue} from "@nextui-org/table";
 import DefaultLayout from "@/layouts/default";
 import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+
+const testimonials = [
+  {
+    review:"Dr. Gershia Borges treated me for endometriosis. Her expertise in managing this condition gave me relief. Grateful for her compassionate care and dedication to women's health.",
+    name: "Michelle Barbosa",
+    place: "Colva",
+  },
+  {
+    review:"Dr. Gershia Borges provided exceptional care during my battle with PCOS. Her approach to treatment, including lifestyle modifications and medication, significantly improved my quality of life. Thank you for managing this challenging condition and for your treatment.",
+    name: "Nadia Fernandes",
+    place: "Panjim",
+  },
+  {
+    review:"I want to express my appreciation to Dr. Gershia Borges for her care in treating my uterine fibroids. From our very first consultation, Dr. Borges made me feel valued and understood. She patiently answered all my questions and alleviated my concerns with her expertise and warmth. Dr. Borges dedication to her patients is truly commendable; Highly Recommended",
+    name: "Celebrity Dcosta",
+    place: "Sanguem",
+  },
+];
 
 const rows = [
   {
@@ -212,33 +233,13 @@ export default function IndexPage() {
       {/* Testimonials Section 6*/}
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Patient Testimonials</h2>
-      <br />
-      <div className="max-w-[900px] flex flex-wrap justify-center gap-7">
-        <Card className="h-auto w-full sm:w-auto md:w-[calc(33%-16px)]">
-          <CardBody className="p-4">
-            <p className="text-lg font-semibold text-gray-800">{siteConfig.card_testimonial_data.client1_name}</p>
-            <p className="text-base text-gray-600 mt-2">
-            &quot;{siteConfig.card_testimonial_data.client1_testimonial}&quot;
-            </p>
-          </CardBody>
-        </Card>
-        <Card className="h-auto w-full sm:w-auto md:w-[calc(33%-16px)]">
-          <CardBody className="p-4">
-            <p className="text-lg font-semibold text-gray-800">{siteConfig.card_testimonial_data.client2_name}</p>
-            <p className="text-base text-gray-600 mt-2">
-            &quot;{siteConfig.card_testimonial_data.client2_testimonial}&quot;
-            </p>
-          </CardBody>
-        </Card>
-        <Card className="h-auto w-full sm:w-auto md:w-[calc(33%-16px)]">
-          <CardBody className="p-4">
-            <p className="text-lg font-semibold text-gray-800">{siteConfig.card_testimonial_data.client3_name}</p>
-            <p className="text-base text-gray-600 mt-2">
-            &quot;{siteConfig.card_testimonial_data.client3_testimonial}&quot;
-            </p>
-          </CardBody>
-        </Card>
-      </div>
+      <div className="h-[25rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="right"
+        speed="slow"
+      />
+    </div>
     </section>
       <Divider className="my-4" />
 
@@ -287,7 +288,6 @@ export default function IndexPage() {
         </div>
       </div>
     </section>
-
     </DefaultLayout>
   );
 }
