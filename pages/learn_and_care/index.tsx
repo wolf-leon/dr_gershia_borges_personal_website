@@ -10,7 +10,7 @@ export default function DocsPage() {
       {/* Section 1 */}
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-pink-500">Knowledge to Pregnancy, Gynecology, and Women&apos;s Health & Wellness</h2>
+          <h2 className="text-3xl font-bold text-pink-500">Knowledge to Pregnancy and Women&apos;s Health & Wellness</h2>
           <br />
         </div>
       </section>

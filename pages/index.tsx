@@ -232,15 +232,14 @@ export default function IndexPage() {
 
       {/* Testimonials Section 6*/}
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Patient Testimonials</h2>
-      <div className="h-[25rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
+      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center ">Patient Testimonials</h2>
+    </section>
+    <InfiniteMovingCards
         items={testimonials}
         direction="right"
         speed="slow"
       />
-    </div>
-    </section>
+      <br />
       <Divider className="my-4" />
 
 
