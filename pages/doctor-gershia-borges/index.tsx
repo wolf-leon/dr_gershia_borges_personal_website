@@ -128,7 +128,7 @@ export default function DocsPage() {
     },
     { 
       title: "Women Health Check-up", 
-      body: "A women's health check-up is a comprehensive medical evaluation aimed at assessing and promoting overall health and well-being in women. It typically includes a review of medical history, physical examination, and screening tests for common health issues that affect women, such as breast cancer, cervical cancer, osteoporosis, and cardiovascular disease. Depending on individual risk factors and age, additional tests or evaluations may be recommended, such as mammograms, bone density scans, cholesterol screenings, or pelvic exams. Women's health check-ups are important for early detection of health problems, prevention of disease, and promotion of healthy lifestyle behaviors."
+      body: "Woman health check-up is a comprehensive medical evaluation aimed at assessing and promoting overall health and well-being in women. It typically includes a review of medical history, physical examination, and screening tests for common health issues that affect women, such as breast cancer, cervical cancer, osteoporosis, and cardiovascular disease. Depending on individual risk factors and age, additional tests or evaluations may be recommended, such as mammograms, bone density scans, cholesterol screenings, or pelvic exams. Women health check-ups are important for early detection of health problems, prevention of disease, and promotion of healthy lifestyle behaviors."
     }
   ];
   
@@ -165,7 +165,7 @@ export default function DocsPage() {
         <h2 className="text-3xl font-bold text-pink-500 text-center">Professional Work Expertise</h2>
         <div className="max-w-4xl text-center">
         <p className="text-lg text-center mt-5">
-          {siteConfig.nav_logo_name_small_devices} has extensive expertise in various areas of gynecology and obstetrics, providing comprehensive care for women's health. She currently practices at Victor Hospital, Margao, Goa. Her professional work expertise includes:
+          {siteConfig.nav_logo_name_small_devices} has extensive expertise in various areas of gynecology and obstetrics, providing comprehensive care for women&apos;s health. She currently practices at Victor Hospital, Margao, Goa. Her professional work expertise includes:
         </p>
         </div>
         <br />
