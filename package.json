@@ -9,6 +9,7 @@
 		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
 	},
 	"dependencies": {
+		"@nextui-org/modal": "^2.0.35",
 		"@nextui-org/react": "^2.4.1",
 		"@nextui-org/table": "^2.0.35",
 		"@react-aria/visually-hidden": "^3.8.10",

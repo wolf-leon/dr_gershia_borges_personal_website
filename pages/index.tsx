@@ -125,7 +125,7 @@ export default function IndexPage() {
               radius: "full",
               variant: "shadow",
             })}
-            href="/doctor-gershia-borges"
+            href="/doctor-gershia-borges#services"
           >
             View All Services
           </Link>
