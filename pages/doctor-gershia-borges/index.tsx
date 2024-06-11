@@ -99,8 +99,8 @@ export default function DocsPage() {
 
   const expertiseAreas: ExpertiseArea[] = [
     { 
-      title: "Preconception Counsel", 
-      body: "Preconception counselling involves discussing various aspects of family planning and pregnancy preparation with individuals or couples who are planning to conceive. During these sessions, healthcare providers offer guidance on optimizing health before pregnancy, such as achieving a healthy weight, managing chronic conditions, and adopting healthy lifestyle habits. They may also discuss genetic testing, vaccinations, and screening for infectious diseases to ensure a safe and healthy pregnancy. Additionally, preconception counselling addresses potential risks and complications, helping individuals make informed decisions and plan for a successful pregnancy journey."
+      title: "Preconception Care", 
+      body: "Preconception Care also Called Pregnancy Counselling involves discussing various aspects of family planning and pregnancy preparation with individuals or couples who are planning to conceive. During these sessions, healthcare providers offer guidance on optimizing health before pregnancy, such as achieving a healthy weight, managing chronic conditions, and adopting healthy lifestyle habits. They may also discuss genetic testing, vaccinations, and screening for infectious diseases to ensure a safe and healthy pregnancy. Additionally, preconception counselling addresses potential risks and complications, helping individuals make informed decisions and plan for a successful pregnancy journey."
     },
     { 
       title: "Infertility", 
