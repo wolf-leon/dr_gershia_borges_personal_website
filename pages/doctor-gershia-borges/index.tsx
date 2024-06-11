@@ -284,7 +284,7 @@ export default function DocsPage() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           height="476"
-          width="330"
+          width="300"
         ></iframe> 
         <iframe
           src="https://www.youtube.com/embed/EUgFgOqnGWw?si=zihfKM3QsJuW-Oxi"
@@ -294,7 +294,7 @@ export default function DocsPage() {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
           height="476"
-          width="330"
+          width="300"
         ></iframe>
       </div>
 
@@ -302,21 +302,21 @@ export default function DocsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <iframe
           title="Gershia Borges 3 video"
-          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F175796568893483%2F&show_text=false&width=330&t=0"
+          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F175796568893483%2F&show_text=false&width=300&t=0"
           scrolling="no"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
            height="476"
-          width="330"
+          width="300"
         ></iframe>
         <iframe
         title="Gershia Borges 4 video"
-          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F804970777610862%2F&show_text=false&width=330&t=0"
+          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F804970777610862%2F&show_text=false&width=300&t=0"
           scrolling="no"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
           height="476"
-          width="330"
+          width="300"
         ></iframe>
       </div>
     </section>
