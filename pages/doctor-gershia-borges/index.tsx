@@ -123,11 +123,11 @@ export default function DocsPage() {
       body: "Cervical cancer screening is a preventive health measure aimed at detecting abnormal changes in the cells of the cervix early, before they develop into cervical cancer. The most common screening test for cervical cancer is the Pap test (Pap smear), which involves collecting cells from the cervix and examining them under a microscope for abnormalities. Another screening option is the HPV test, which detects the presence of high-risk strains of the human papillomavirus (HPV) that can cause cervical cancer. Regular cervical cancer screening can help detect precancerous changes early when they are most treatable and prevent the development of cervical cancer."
     },
     { 
-      title: "Gynaecological Cancers", 
+      title: "Gynaecology Cancers", 
       body: "Gynaecological cancers are cancers that affect the female reproductive system, including the cervix, uterus, ovaries, fallopian tubes, vulva, and vagina. The most common types of gynaecological cancers are cervical cancer, endometrial (uterine) cancer, ovarian cancer, and vulvar cancer. Risk factors for gynaecological cancers may include genetic predisposition, exposure to certain viruses (such as HPV), hormonal factors, and lifestyle factors such as smoking or obesity. Early detection and treatment are critical for improving outcomes in gynaecological cancers, and screening tests such as Pap tests, HPV tests, and pelvic exams can help detect these cancers at an early stage when they are most treatable."
     },
     { 
-      title: "Women Health Check-up", 
+      title: "Health Checkup", 
       body: "Woman health check-up is a comprehensive medical evaluation aimed at assessing and promoting overall health and well-being in women. It typically includes a review of medical history, physical examination, and screening tests for common health issues that affect women, such as breast cancer, cervical cancer, osteoporosis, and cardiovascular disease. Depending on individual risk factors and age, additional tests or evaluations may be recommended, such as mammograms, bone density scans, cholesterol screenings, or pelvic exams. Women health check-ups are important for early detection of health problems, prevention of disease, and promotion of healthy lifestyle behaviors."
     },
     
@@ -283,7 +283,8 @@ export default function DocsPage() {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
-          className="w-full sm:w-64 md:w-360 lg:w-96 h-64 md:h-80 lg:h-105"
+          height="476"
+          width="380"
         ></iframe> 
         <iframe
           src="https://www.youtube.com/embed/EUgFgOqnGWw?si=zihfKM3QsJuW-Oxi"
@@ -292,7 +293,8 @@ export default function DocsPage() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="w-full sm:w-64 md:w-360 lg:w-96 h-64 md:h-80 lg:h-105"
+          height="476"
+          width="380"
         ></iframe>
       </div>
 
@@ -300,23 +302,24 @@ export default function DocsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <iframe
           title="Gershia Borges 3 video"
-          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F804970777610862%2F&show_text=true&width=267&t=0"
+          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F175796568893483%2F&show_text=false&width=380&t=0"
           scrolling="no"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          className="w-full sm:w-64 md:w-80 lg:w-96 h-80 md:h-96 lg:h-[591px]"
+           height="476"
+          width="380"
         ></iframe>
         <iframe
         title="Gershia Borges 4 video"
-          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F175796568893483%2F&show_text=true&width=267&t=0"
+          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F804970777610862%2F&show_text=false&width=380&t=0"
           scrolling="no"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          className="w-full sm:w-64 md:w-80 lg:w-96 h-80 md:h-96 lg:h-[591px]"
+          height="476"
+          width="380"
         ></iframe>
       </div>
     </section>
-
     <Divider className="my-4" />
 
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
