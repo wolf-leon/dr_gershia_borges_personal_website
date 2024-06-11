@@ -62,9 +62,9 @@ export const siteConfig = {
     },
   ],
   links: {
-    whatsapp: "https://github.com/nextui-org/nextui",
-    mobile: "+91999999999",
-    email: "gershiaborges@gmail.com",
+    whatsapp: "https://wa.me/+919535035487",
+    mobile: "+919535035487",
+    email: "drgershiaborges@gmail.com",
   },
   faq_content:{
     faq1:"A gynecologist provides comprehensive care related to female reproductive health, including annual exams, pap smears, birth control counseling, STI testing, and treatment for menstrual disorders, menopause, and other reproductive health issues.",

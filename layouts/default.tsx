@@ -30,8 +30,8 @@ export default function DefaultLayout({
         </nav>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '20px' }}>
           <Link href={siteConfig.links.whatsapp} style={{ color: '#333' }}><FaWhatsapp /></Link>
-          <Link href={siteConfig.links.email} style={{ color: '#333' }}><FaEnvelope /></Link>
-          <Link href={siteConfig.links.mobile} style={{ color: '#333' }}><FaPhone /></Link>
+          <Link href="mailto:drgershiaborges@gmail.com" style={{ color: '#333' }}><FaEnvelope /></Link>
+          <Link href="tel:+919535035487" style={{ color: '#333' }}><FaPhone /></Link>
         </div>
         <div style={{ fontSize: '14px', color: '#333' }}>
           &copy; {new Date().getFullYear()} {siteConfig.nav_logo_name_small_devices}. All rights reserved.

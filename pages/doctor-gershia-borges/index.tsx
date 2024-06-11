@@ -21,7 +21,7 @@ import {
   button as buttonStyles ,
 } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
-import { FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaWhatsapp, FaFacebook } from "react-icons/fa";
 
 interface ExpertiseArea {
   title: string;
@@ -99,7 +99,7 @@ export default function DocsPage() {
 
   const expertiseAreas: ExpertiseArea[] = [
     { 
-      title: "Preconception Counselling", 
+      title: "Preconception Counsel", 
       body: "Preconception counselling involves discussing various aspects of family planning and pregnancy preparation with individuals or couples who are planning to conceive. During these sessions, healthcare providers offer guidance on optimizing health before pregnancy, such as achieving a healthy weight, managing chronic conditions, and adopting healthy lifestyle habits. They may also discuss genetic testing, vaccinations, and screening for infectious diseases to ensure a safe and healthy pregnancy. Additionally, preconception counselling addresses potential risks and complications, helping individuals make informed decisions and plan for a successful pregnancy journey."
     },
     { 
@@ -119,7 +119,7 @@ export default function DocsPage() {
       body: "Menopause is a natural biological process that marks the end of menstruation and fertility in women. It typically occurs around the age of 45 to 55, although the timing can vary. Menopause is characterized by hormonal changes, specifically a decline in estrogen production by the ovaries, which leads to the cessation of menstrual periods. Symptoms of menopause may include hot flashes, night sweats, mood changes, vaginal dryness, and changes in libido. Management of menopausal symptoms may involve lifestyle modifications, hormone replacement therapy (HRT), or other medications to alleviate symptoms and improve quality of life."
     },
     { 
-      title: "Cervical Cancer Screening", 
+      title: "Cervical Cancer", 
       body: "Cervical cancer screening is a preventive health measure aimed at detecting abnormal changes in the cells of the cervix early, before they develop into cervical cancer. The most common screening test for cervical cancer is the Pap test (Pap smear), which involves collecting cells from the cervix and examining them under a microscope for abnormalities. Another screening option is the HPV test, which detects the presence of high-risk strains of the human papillomavirus (HPV) that can cause cervical cancer. Regular cervical cancer screening can help detect precancerous changes early when they are most treatable and prevent the development of cervical cancer."
     },
     { 
@@ -129,10 +129,11 @@ export default function DocsPage() {
     { 
       title: "Women Health Check-up", 
       body: "Woman health check-up is a comprehensive medical evaluation aimed at assessing and promoting overall health and well-being in women. It typically includes a review of medical history, physical examination, and screening tests for common health issues that affect women, such as breast cancer, cervical cancer, osteoporosis, and cardiovascular disease. Depending on individual risk factors and age, additional tests or evaluations may be recommended, such as mammograms, bone density scans, cholesterol screenings, or pelvic exams. Women health check-ups are important for early detection of health problems, prevention of disease, and promotion of healthy lifestyle behaviors."
-    }
+    },
+    
   ];
   
-
+  
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -176,7 +177,7 @@ export default function DocsPage() {
               {expertiseAreas.map((area) => (
                 <Button
                   key={area.title}
-                  className="w-full rounded-full bg-blue-500 text-white text-sm"
+                  className="w-full rounded-full bg-blue-500 text-white ${isSmallScreen ? 'text-sm' : ''}"
                   onPress={() => handleOpenModal(area.title, area.body)}
                 >
                   {area.title}
@@ -273,11 +274,83 @@ export default function DocsPage() {
 
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Featured</h2>
-      
-      </section>
-      <Divider className="my-4" />
+      <br></br>
+      {/* Container for YouTube videos */} 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <iframe
+          src="https://www.youtube.com/embed/3try5AAA8I4?si=s3ZQ8RFYmyyb6ZXT"
+          title="Gershia Borges 1 video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          className="w-full sm:w-64 md:w-360 lg:w-96 h-64 md:h-80 lg:h-105"
+        ></iframe> 
+        <iframe
+          src="https://www.youtube.com/embed/EUgFgOqnGWw?si=zihfKM3QsJuW-Oxi"
+          title="Gershia Borges 2 video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="w-full sm:w-64 md:w-360 lg:w-96 h-64 md:h-80 lg:h-105"
+        ></iframe>
+      </div>
+
+      {/* Container for Facebook videos */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <iframe
+          title="Gershia Borges 3 video"
+          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F804970777610862%2F&show_text=true&width=267&t=0"
+          scrolling="no"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          className="w-full sm:w-64 md:w-80 lg:w-96 h-80 md:h-96 lg:h-[591px]"
+        ></iframe>
+        <iframe
+        title="Gershia Borges 4 video"
+          src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fvictorhospitalgoa%2Fvideos%2F175796568893483%2F&show_text=true&width=267&t=0"
+          scrolling="no"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          className="w-full sm:w-64 md:w-80 lg:w-96 h-80 md:h-96 lg:h-[591px]"
+        ></iframe>
+      </div>
+    </section>
+
+    <Divider className="my-4" />
+
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+  <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Highlights</h2>
+  <br />
+  <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
+    <div className="md:w-1/2 flex justify-center">
+      <img src="/highligt.jpg" alt="Baby" className="w-full h-auto max-w-sm rounded-lg" />
+    </div>
+    <div className="md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+      <p className="text-lg text-center md:text-left mt-5">
+        {siteConfig.nav_logo_name} led an enlightening Breast Cancer & Cervical Cancer Awareness Talk, in collaboration with BJP Mahila Morcha, at Rukhmani Hall, Ponda. The event, attended by over 500 individuals, was a significant milestone in spreading awareness about these crucial health issues.
+      </p>
+      <br></br>
+      <Link
+            className={buttonStyles({
+              color: "primary",
+              radius: "full",
+              variant: "shadow",
+            })}
+            href="https://www.facebook.com/victorhospitalgoa/posts/961810859287597/?_rdr"
+            target="_blank"
+          >
+            <FaFacebook className="w-6 h-6 mr-2" />
+            See Post on Facebook
+          </Link>
+    </div>
+  </div>
+</section>
+
+
 
         
     </DefaultLayout>
   );
+  
 }
