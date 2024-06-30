@@ -62,8 +62,8 @@ export const siteConfig = {
     },
   ],
   links: {
-    whatsapp: "https://wa.me/+919535035487",
-    mobile: "+919535035487",
+    whatsapp: "https://wa.me/+919272037826",
+    mobile: "+919272037826",
     email: "drgershiaborges@gmail.com",
   },
   faq_content:{
