@@ -7,11 +7,11 @@ export const siteConfig = {
   nav_logo_name_small_devices: "Dr Gershia Borges",
   navItems: [
     {
-      label: "Home",
+      label: "Home ",
       href: "/",
     },
     {
-      label: "Learn and Care",
+      label: "Learn and Care Information",
       href: "/learn_and_care",
     },
     {
@@ -37,7 +37,7 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Learn and Care",
+      label: "Learn and Care Information",
       href: "/learn_and_care",
     },
     {
