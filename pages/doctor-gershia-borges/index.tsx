@@ -9,87 +9,22 @@ import {
   useDisclosure,
   Divider,
   Button,
-  Table,
-  TableRow,
-  TableCell,
-  TableHeader,
-  TableColumn,
-  TableBody,
-  getKeyValue,
   Link,
   Snippet,
   button as buttonStyles ,
+  Image
 } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
-import { FaEnvelope, FaPhone, FaWhatsapp, FaFacebook } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 
 interface ExpertiseArea {
   title: string;
   body: string;
 }
 
-const rows = [
-  {
-    key: "1",
-    Day: "Monday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "2",
-    Day: "Tuesday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "3",
-    Day: "Wednesday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "4",
-    Day: "Thursday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "5",
-    Day: "Friday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "6",
-    Day: "Saturday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "7",
-    Day: "Sunday",
-    Morning: "Closed",
-    Evening: "Closed",
-  },
-];
-
-const columns = [
-  {
-    key: "Day",
-    label: "Day",
-  },
-  {
-    key: "Morning",
-    label: "Morning",
-  },
-  {
-    key: "Evening",
-    label: "Evening",
-  },
-];
 
 export default function DocsPage() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose,onOpenChange } = useDisclosure();
   const [modalContent, setModalContent] = useState<ExpertiseArea>({ title: "", body: "" });
 
   const handleOpenModal = (title: string, body: string) => {
@@ -119,8 +54,8 @@ export default function DocsPage() {
       body: "Menopause is a natural biological process that marks the end of menstruation and fertility in women. It typically occurs around the age of 45 to 55, although the timing can vary. Menopause is characterized by hormonal changes, specifically a decline in estrogen production by the ovaries, which leads to the cessation of menstrual periods. Symptoms of menopause may include hot flashes, night sweats, mood changes, vaginal dryness, and changes in libido. Management of menopausal symptoms may involve lifestyle modifications, hormone replacement therapy (HRT), or other medications to alleviate symptoms and improve quality of life."
     },
     { 
-      title: "Cervical Cancer", 
-      body: "Cervical cancer screening is a preventive health measure aimed at detecting abnormal changes in the cells of the cervix early, before they develop into cervical cancer. The most common screening test for cervical cancer is the Pap test (Pap smear), which involves collecting cells from the cervix and examining them under a microscope for abnormalities. Another screening option is the HPV test, which detects the presence of high-risk strains of the human papillomavirus (HPV) that can cause cervical cancer. Regular cervical cancer screening can help detect precancerous changes early when they are most treatable and prevent the development of cervical cancer."
+      title: "Fibroids", 
+      body: "Uterine fibroids are non-cancerous growths in the uterus that can cause heavy menstrual bleeding, pelvic pain, and frequent urination. They can vary in size and are typically diagnosed through pelvic ultrasound or MRI. Treatment options include medications, non-surgical procedures like uterine fibroid embolization, and surgical options such as myomectomy or hysterectomy, depending on the severity of symptoms and individual health goals.Many women with fibroids experience no symptoms and may require no treatment, but those with significant symptoms should consult their healthcare provider to explore appropriate management options."
     },
     { 
       title: "Gynaecology Cancers", 
@@ -136,29 +71,42 @@ export default function DocsPage() {
   
   return (
     <DefaultLayout>
+      {/* Section 1 */}
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">
-          {siteConfig.nav_logo_name}
-        </h2>
-        <br />
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
-          <div className="md:w-1/2 flex justify-center">
-            <img src="Dr.-Gershia-2.jpg" alt="Dr.-Gershia" className="w-full h-auto max-w-sm rounded-lg" />
-          </div>
-          <div className="text-center md:text-left md:w-1/2">
-            <p className="text-lg text-center mt-5">
-              {siteConfig.nav_logo_name_small_devices} is a full-time Obstetrician and Gynaecologist, holding an MS in Obstetrics and Gynaecology from St. John&apos;s Medical College, Bangalore.
-            </p>
-            <p className="text-lg text-center mt-5">
-              Specializing in high-risk obstetrics and gynaecological disorders, she leverages her experience and exceptional skills to provide transformative care and guidance.
-              <br />
-              <br />
-              She has impacted the lives of countless patients with her dedicated and compassionate approach.
-            </p>
-            <br />
-          </div>
+  <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">{siteConfig.nav_logo_name}</h2>
+  <h3 className="text-lg text-pink-400 text-gray-700 max-w-4xl text-center">MBBS, MS(OBGyn), FMAS, DMAS</h3>
+  <br />
+
+  <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
+    <div className="md:w-1/2 flex justify-center">
+      <div className="relative">
+        <div className="w-100 h-100 rounded-full overflow-hidden border-8 border-pink-200 flex items-center justify-center shadow-lg">
+          <img src="/Dr.-Gershia-2.jpg" alt="Dr. Gershia Borges" className="w-full h-full object-cover rounded-full" />
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div className="text-center md:text-left md:w-1/2">
+      <p className="text-md mt-5">Dr. Gershia Borges is a dedicated Gynaecologist and Obstetrician currently practicing at Victor Hospital, Goa. With an impressive educational background including an MBBS, MS (OBGyn), FMAS, and DMAS from St. John&apos;s University in Karnataka, she is also a highly skilled Laparoscopic Surgeon.</p>
+      <p className="text-md mt-5">Her passion for patient care drives Dr. Gershia to deliver the highest quality medical services. She is committed to ensuring that every woman receives the best medical expertise to improve their overall quality of life.</p>
+      <p className="text-md mt-5">Continuing her education is a priority for Dr. Gershia, who remains a &apos;forever student&apos; in the fields of gynaecology and obstetrics. Her rigorous training and qualifications enable her to provide the latest, evidence-based treatments to her patients, ensuring they benefit from proven and effective medical practices.</p>
+      <p className="text-md mt-5">Dr. Gershia also values the importance of a holistic approach to healthcare. She works closely with her patients to address not only their immediate medical needs but also their emotional and psychological well-being. By fostering a supportive and compassionate environment, she ensures that each patient feels heard and cared for throughout their treatment journey.</p>
+      
+    </div>
+  </div>
+  
+  <div className="max-w-4xl text-center">
+    <p className="text-md mt-5">Dr. Gershia is dedicated to empowering women by sharing valuable health information through social media. Her platform provides insights into various women&apos;s health issues, including PCOS, Endometriosis, Fertility, Menstrual problems, Contraception, Fibroids, Sexual Health, and Menopause.</p>
+    <p className="text-md mt-5">Her goal is to debunk myths and deliver accurate health information, countering the misinformation often found online. Dr. Gershia strives to educate women, helping them access reliable sources and make informed decisions about their health.</p>
+    <p className="text-md mt-5">Beyond her clinical practice, Dr. Gershia actively engages in community outreach and health education. She regularly participates in seminars and workshops to share her knowledge and advocate for women&apos;s health issues. Her commitment extends beyond the walls of the hospital, as she strives to make a positive impact on the broader community through her educational efforts and advocacy work.</p>
+    <br />
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-5">
+      <a href="/doctor-gershia-borges#appointment" className="bg-primary text-white rounded-full py-2 px-4 shadow">Book Appointment</a>
+    </div>
+  </div>
+</section>
+
+
       <Divider className="my-4" />
 
       {/* Section 2 */}
@@ -210,7 +158,7 @@ export default function DocsPage() {
 
       {/* Section 3 */}
 
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <section id="appointment" className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-pink-500">Book Appointment</h2>
           <br />
@@ -249,27 +197,32 @@ export default function DocsPage() {
       {/* Section 4 */}
 
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Open Consultation Hours</h2>
-      <p className="text-lg text-center mt-5">
-        {siteConfig.nav_logo_name_small_devices} offers open consultation hours for patients seeking medical advice or treatment. 
-        Whether you need a routine check-up or have specific health concerns, She is available to provide personalized care and support. 
-        </p>
-        <p className="text-lg text-center mt-5">Feel free to schedule an appointment or visit during the specified consultation hours.
+  <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Open Consultation Hours</h2>
+  <p className="text-lg text-center mt-5">
+    {siteConfig.nav_logo_name_small_devices} offers open consultation hours for patients seeking medical advice or treatment. 
+    Whether you need a routine check-up or have specific health concerns, she is available to provide personalized care and support.
+  </p>
+  <p className="text-lg text-center mt-5">
+    Feel free to schedule an appointment or visit during the specified consultation hours.
+  </p>
+  <br />
+  <div className="max-w-4xl mx-auto text-center">
+    <div className="bg-white shadow-lg rounded-lg p-6 mb-6 border border-gray-200">
+      <h3 className="text-xl font-semibold text-pink-500 mb-4">Monday - Saturday</h3>
+      <p className="text-lg">
+        <span className="font-medium">Morning:</span> 9:00 AM - 1:00 PM<br />
+        <span className="font-medium">Afternoon:</span> 3:00 PM - 7:00 PM
       </p>
-      <br />
-      <Table className="mx-auto" aria-label="Example table with dynamic content">
-      <TableHeader columns={columns}>
-        {(column) => <TableColumn key={column.key} className="text-center">{column.label}</TableColumn>}
-      </TableHeader>
-      <TableBody items={rows}>
-        {(item) => (
-          <TableRow key={item.key}>
-            {(columnKey) => <TableCell className="text-center">{getKeyValue(item, columnKey)}</TableCell>}
-          </TableRow>
-        )}
-      </TableBody>
-    </Table>
-      </section>
+    </div>
+    <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
+      <h3 className="text-xl font-semibold text-pink-500 mb-4">Sunday</h3>
+      <p className="text-lg">
+        Available by appointment only. Please contact us to schedule.
+      </p>
+    </div>
+  </div>
+</section>
+
       <Divider className="my-4" />
 
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -351,6 +304,73 @@ export default function DocsPage() {
 </section>
 
 
+ {/* Instagram Section  */}
+    <section className="flex flex-col items-center justify-center gap-6 py-8 md:py-10 bg-gray-50">
+      <div className="max-w-xs w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        {/* Profile Picture with Instagram Story Outline */}
+        <div className="relative flex items-center justify-center mt-4 mb-2">
+          <div className="w-24 h-24 bg-gradient-to-r from-pink-800 to-red-800 rounded-full absolute"></div> {/* Instagram Story Outline */}
+          <img
+            src="/Dr.-Gershia-2.jpg" // Replace with the actual URL of the profile picture
+            alt="Profile"
+            className="w-24 h-24 object-cover rounded-full z-10"
+          />
+        </div>
+
+        {/* Username */}
+        <div className="text-center mb-4">
+          <p className="text-md text-gray-700 font-semibold">@dr.wombate</p>
+        </div>
+
+        {/* Bio Section */}
+        <div className="p-4 text-center">
+          <h3 className="text-xl font-semibold text-pink-500">Dr. Gershia Borges</h3>
+          <p className="text-md text-gray-700 mt-2">Gynaecologist & Obstetrician | Passionate about women&apos;s health. Sharing insights and updates on Instagram to empower and educate.</p>
+        </div>
+
+        {/* Follow Button */}
+        <div className="p-4 text-center">
+          <a 
+            href="https://www.instagram.com/dr.wombmate?igsh=ampndmQ4d2dlcjA1" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full py-2 px-6 shadow-lg hover:bg-gradient-to-l transition duration-300"
+          >
+            <FaInstagram className="inline mr-2" /> Follow on Instagram
+          </a>
+        </div>
+        
+
+        {/* QR Code Button */}
+        <div className="p-4 text-center">
+          <Button
+            onPress={onOpen}
+            className="bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full py-2 px-6 shadow-lg hover:bg-gradient-to-l transition duration-300"
+          >
+            Follow Using QR Code
+          </Button>
+        </div>
+      </div>
+
+      {/* Modal */}
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center">
+        <ModalContent>
+          <ModalHeader className="flex flex-col gap-1">{siteConfig.nav_logo_name_small_devices} Instagram QR Code</ModalHeader>
+          <ModalBody>
+            <Image
+              width={450}
+              alt="QR Code"
+              src="/qrcode.jpg" // Replace with the actual URL of the QR code image
+            />
+          </ModalBody>
+          <ModalFooter>
+            <Button color="danger" variant="solid"  onPress={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </section>
 
         
     </DefaultLayout>

@@ -30,17 +30,17 @@ export const Navbar = () => {
         </div>
         <div className="contact-info flex items-center gap-8">
           <div className="flex items-center gap-2">
-            <FaClock />
+            <FaClock className="text-pink-500" />
             <span className="text-sm">Open: Monday to Saturday  9am-7pm, Appointment Basis : Sunday</span>
           </div>
           <p >|</p>
           <div className="flex items-center gap-2">
-            <FaPhone />
+            <FaPhone className="text-pink-500" />
             <span className="text-sm">+919272037826</span>
           </div>
           <p >|</p>
           <div className="flex items-center gap-2">
-            <FaEnvelope />
+            <FaEnvelope className="text-pink-500" />
             <span className="text-sm"> drgershiaborges@gmail.com</span>
           </div>
         </div>

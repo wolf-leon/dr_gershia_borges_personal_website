@@ -16,7 +16,7 @@ export default function AboutPage() {
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-lg text-center justify-center">
-        <h2 className="text-3xl font-bold text-pink-500 text-center">About {siteConfig.nav_logo_name_small_devices}</h2>
+        <h2 className="text-3xl font-bold text-pink-500 text-center">About {siteConfig.nav_logo_name}</h2>
         </div>
         <br></br>
         <div className="flex flex-col items-center justify-center w-full max-w-4xl px-4 md:px-0">
@@ -30,7 +30,7 @@ export default function AboutPage() {
             </div>
             <div className="md:w-2/3">
               <h2 className="text-2xl font-semibold">{siteConfig.nav_logo_name_small_devices}</h2>
-              <p>MBBS, MS (Obstetrics & Gynecology)</p>
+              <p>MBBS, MS(OBGyn), FMAS, DMAS</p>
               <p className="mt-4 text-gray-600">
                 {siteConfig.nav_logo_name_small_devices} is a certified and experienced gynecologist and obstetrician. She is registered with the Medical Council of India.She completed her MBBS degree and MS (Obstetrics & Gynecology) at St. John&apos;s Medical College, Bangalore. 
               </p>

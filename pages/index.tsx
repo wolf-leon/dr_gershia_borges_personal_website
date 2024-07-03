@@ -1,114 +1,68 @@
 "use client";
-import { Link, Card,CardBody,Snippet, Divider,button as buttonStyles } from "@nextui-org/react";
+import { Link,Snippet, Divider,button as buttonStyles } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import {  Table,  TableHeader,  TableBody,  TableColumn,  TableRow,  TableCell,getKeyValue} from "@nextui-org/table";
 import DefaultLayout from "@/layouts/default";
-import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaPhone, FaGoogle } from 'react-icons/fa';
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 const testimonials = [
   {
-    review:"Dr. Gershia Borges treated me for endometriosis. Her expertise in managing this condition gave me relief. Grateful for her compassionate care and dedication to women's health.",
-    name: "Michelle Barbosa",
-    place: "Colva",
+    review:"Thank you Dr. Gershia for another wonderful support provided today. you are awesome may god bless you abundantly keep you blessed.",
+    name: "Smitha",
+    place: "",
   },
   {
-    review:"Dr. Gershia Borges provided exceptional care during my battle with PCOS. Her approach to treatment, including lifestyle modifications and medication, significantly improved my quality of life. Thank you for managing this challenging condition and for your treatment.",
-    name: "Nadia Fernandes",
-    place: "Panjim",
+    review:"Hello Dr. Gershia Borges , Good Evening just wanted to let you know that I and my daughter are so grateful to you. Your Gentleness and kindness amazed me. Im doing fine after the Procedure. Hats off to you.",
+    name: "Sophie",
+    place: "",
   },
   {
-    review:"I want to express my appreciation to Dr. Gershia Borges for her care in treating my uterine fibroids. From our very first consultation, Dr. Borges made me feel valued and understood. She patiently answered all my questions and alleviated my concerns with her expertise and warmth. Dr. Borges dedication to her patients is truly commendable; Highly Recommended",
-    name: "Celebrity Dcosta",
-    place: "Sanguem",
+    review:"Dr. Gershia Borges performed my surgery with such great care. Im feeling better now thanks to her. Dr.Gershia was very assuring and Helped me a lot. All nurses and staff were very helpful too. Hospital room were clean and well maintained. Special thanks to Dr.Gershia and all. May the Lord shower his blessings on you all",
+    name: "Sandra Diniz",
+    place: "",
   },
 ];
 
-const rows = [
-  {
-    key: "1",
-    Day: "Monday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "2",
-    Day: "Tuesday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "3",
-    Day: "Wednesday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "4",
-    Day: "Thursday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "5",
-    Day: "Friday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "6",
-    Day: "Saturday",
-    Morning: "10:00am-12:30pm",
-    Evening: "17:00pm-19:30pm",
-  },
-  {
-    key: "7",
-    Day: "Sunday",
-    Morning: "Closed",
-    Evening: "Closed",
-  },
-];
 
-const columns = [
-  {
-    key: "Day",
-    label: "Day",
-  },
-  {
-    key: "Morning",
-    label: "Morning",
-  },
-  {
-    key: "Evening",
-    label: "Evening",
-  },
-];
 export default function IndexPage() {
   return (
     <DefaultLayout>
 
       {/* Section 1 */}
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
-          <div className="text-center md:text-left md:w-1/2">
-            <h1 className={title()}>A baby is like the&nbsp;</h1>
-            <h1 className={title({ color: "pink" })}>beginning&nbsp;</h1>
-            <h1 className={title()}>
-              of all things.
-            </h1>
-            <br />
-            <h4 className={subtitle({ class: "mt-4" })}>
-              - wonder, hope, a dream of possibilities.
-            </h4>
-            <br />
-          </div>
-          <div className="md:w-1/2 flex justify-center">
-            <img src="/pregnancy_picture-2.jpg" alt="Baby" className="w-full h-auto max-w-sm rounded-lg" />
-          </div>
+  <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">{siteConfig.nav_logo_name}</h2>
+  <h3 className="text-lg text-pink-400 text-gray-700 max-w-4xl text-center">MBBS, MS(OBGyn), FMAS, DMAS</h3>
+  <br />
+
+  <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
+    <div className="md:w-1/2 flex justify-center">
+      <div className="relative">
+        <div className="w-100 h-100 rounded-full overflow-hidden border-8 border-pink-200 flex items-center justify-center shadow-lg">
+          <img src="/Dr.-Gershia-2.jpg" alt="Dr. Gershia Borges" className="w-full h-full object-cover rounded-full" />
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div className="text-center md:text-left md:w-1/2">
+      <p className="text-md text-center mt-5">Dr. Gershia Borges is a Gynaecologist and Obstetrician currently working at Victor Hospital, Goa. She has completed her MBBS, MS (OBGyn), FMAS, and DMAS from St. John&apos;s University in Karnataka. She is also a skilled Laparoscopic Surgeon.</p>
+      <p className="text-md text-center mt-5">With a passion for understanding her patients, Dr. Gershia aims to provide the highest quality care. She believes that every woman deserves access to the best medical expertise to enhance their quality of life.</p>
+      <p className="text-md text-center mt-5">Dr. Gershia remains a &apos;forever student,&apos; continually expanding her knowledge in gynaecology and obstetrics. She is committed to staying updated with the latest advancements in her field through ongoing training and professional development.</p>
+    </div>
+  </div>
+  
+  <div className="max-w-4xl text-center">
+    <p className="text-md mt-5">Dr. Gershia believes in empowering women to make the right decisions by sharing information on women&apos;s health on social media. Her social media page has informative posts on common problems women may face, such as PCOS, Endometriosis, Fertility, Menstrual problems, Contraception, Fibroids, Sexual Health and well-being, and Menopause, amongst others.</p>
+    <p className="text-md mt-5">She aims to bust common myths and share accurate information with her community, as many sources share misinformation on social media. Dr. Gershia wishes to educate women and help them find credible sources of information, promoting informed and empowered decisions about their health.</p>
+    <br ></br>
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-5">
+      <a href="/doctor-gershia-borges" className="bg-primary text-white rounded-full py-2 px-4 shadow">View {siteConfig.nav_logo_name_small_devices} Profile</a>
+      <a href="/#appointment" className="bg-primary text-white rounded-full py-2 px-4 shadow md:ml-4">Book Appointment</a>
+    </div>
+  </div>
+</section>
+
       <Divider className="my-4" />
 
       {/* Section 2 */}
@@ -135,7 +89,7 @@ export default function IndexPage() {
 
       {/* Section 3 */}
 
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <section id="appointment" className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-pink-500">Book Appointment</h2>
           <br />
@@ -174,61 +128,35 @@ export default function IndexPage() {
       {/* Section 4 */}
 
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Open Consultation Hours</h2>
-      <p className="text-lg text-center mt-5">
-        {siteConfig.nav_logo_name_small_devices} offers open consultation hours for patients seeking medical advice or treatment. 
-        Whether you need a routine check-up or have specific health concerns, She is available to provide personalized care and support. 
-        </p>
-        <p className="text-lg text-center mt-5">Feel free to schedule an appointment or visit during the specified consultation hours.
+  <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Open Consultation Hours</h2>
+  <p className="text-lg text-center mt-5">
+    {siteConfig.nav_logo_name_small_devices} offers open consultation hours for patients seeking medical advice or treatment. 
+    Whether you need a routine check-up or have specific health concerns, she is available to provide personalized care and support.
+  </p>
+  <p className="text-lg text-center mt-5">
+    Feel free to schedule an appointment or visit during the specified consultation hours.
+  </p>
+  <br />
+  <div className="max-w-4xl mx-auto text-center">
+    <div className="bg-white shadow-lg rounded-lg p-6 mb-6 border border-gray-200">
+      <h3 className="text-xl font-semibold text-pink-500 mb-4">Monday - Saturday</h3>
+      <p className="text-lg">
+        <span className="font-medium">Morning:</span> 9:00 AM - 1:00 PM<br />
+        <span className="font-medium">Afternoon:</span> 3:00 PM - 7:00 PM
       </p>
-      <br />
-      <Table className="mx-auto" aria-label="Example table with dynamic content">
-      <TableHeader columns={columns}>
-        {(column) => <TableColumn key={column.key} className="text-center">{column.label}</TableColumn>}
-      </TableHeader>
-      <TableBody items={rows}>
-        {(item) => (
-          <TableRow key={item.key}>
-            {(columnKey) => <TableCell className="text-center">{getKeyValue(item, columnKey)}</TableCell>}
-          </TableRow>
-        )}
-      </TableBody>
-    </Table>
-      </section>
+    </div>
+    <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
+      <h3 className="text-xl font-semibold text-pink-500 mb-4">Sunday</h3>
+      <p className="text-lg">
+        Available by appointment only. Please contact us to schedule.
+      </p>
+    </div>
+  </div>
+</section>
+
       <Divider className="my-4" />
 
       {/* Section 5 */}
-
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">{siteConfig.nav_logo_name}</h2>
-      <br />
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
-          <div className="md:w-1/2 flex justify-center">
-            <img src="Dr.-Gershia-2.jpg" alt="Dr.-Gershia" className="w-full h-auto max-w-sm rounded-lg" />
-          </div>
-
-          <div className="text-center md:text-left md:w-1/2">
-            <p className="text-lg text-center mt-5">
-            {siteConfig.nav_logo_name_small_devices} is a full-time Obstetrician and Gynaecologist, holding an MS in Obstetrics and Gynaecology from St. John&apos;s Medical College, Bangalore.</p>
-            <p className="text-lg text-center mt-5">Specializing in high-risk obstetrics and gynaecological disorders, She leverages her experience and exceptional skills to provide transformative care and guidance. She has impacted the lives of countless patients with her dedicated and compassionate approach.
-            </p>
-            <br />
-            <div className="flex items-center justify-center md:justify-center">
-              <Link
-                className={buttonStyles({
-                  color: "primary",
-                  radius: "full",
-                  variant: "shadow",
-                })}
-                href="/doctor-gershia-borges"
-              >
-                View {siteConfig.nav_logo_name_small_devices} Profile
-              </Link>
-            </div>
-          </div>
-      </div>
-      </section>
-      <Divider className="my-4" />
 
       {/* Testimonials Section 6*/}
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -240,6 +168,17 @@ export default function IndexPage() {
         speed="slow"
       />
       <br />
+      <div className="text-center my-6">
+        <a 
+          href="https://g.co/kgs/yN4SR4u"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-blue-500 text-white rounded-full py-2 px-4 shadow-lg hover:bg-blue-600 transition duration-300"
+        >
+          <FaGoogle className="text-xl" />
+          Read Reviews on Google
+        </a>
+      </div>
       <Divider className="my-4" />
 
 
