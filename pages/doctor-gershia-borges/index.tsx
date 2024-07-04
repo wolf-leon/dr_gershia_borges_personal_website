@@ -26,10 +26,15 @@ interface ExpertiseArea {
 export default function DocsPage() {
   const { isOpen, onOpen, onClose,onOpenChange } = useDisclosure();
   const [modalContent, setModalContent] = useState<ExpertiseArea>({ title: "", body: "" });
+  const { isOpen: isQRCodeModalOpen, onOpen: onQRCodeModalOpen, onClose: onQRCodeModalClose } = useDisclosure();
 
   const handleOpenModal = (title: string, body: string) => {
     setModalContent({ title, body });
     onOpen();
+  };
+
+  const handleOpenQRCodeModal = () => {
+    onQRCodeModalOpen();
   };
 
   const expertiseAreas: ExpertiseArea[] = [
@@ -223,6 +228,89 @@ export default function DocsPage() {
   </div>
 </section>
 
+    <Divider className="my-4" />
+
+      <section id="appointment" className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+        <div className="max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-pink-500">Follow On Instagram</h2>
+          <br />
+         {/* Instagram Section  */}
+    <section className="flex flex-col items-center justify-center gap-6 py-8 md:py-10">
+      <div className="max-w-lg w-full p-4 md:p-6 bg-white rounded-lg shadow-lg relative overflow-hidden border-pink-200 border-2 md:max-w-md lg:max-w-lg">
+        {/* Profile Picture with Instagram Story Outline */}
+        <div className="relative flex items-center justify-center mt-4 mb-2">
+          <div className="w-40 h-40 bg-gradient-to-r from-pink-800 to-red-800 rounded-full absolute"></div> {/* Instagram Story Outline */}
+          <img
+            src="/Dr.-Gershia-2.jpg" // Replace with the actual URL of the profile picture
+            alt="Profile"
+            className="w-40 h-40 object-cover rounded-full z-10"
+          />
+        </div>
+
+        {/* Username */}
+        <div className="text-center mb-4">
+          <p className="text-xl font-semibold text-pink-500">@dr.wombate</p>
+        </div>
+
+        {/* Bio Section */}
+        <div className="p-4 text-center">
+          <p className="text-sm text-gray-700 mt-2">👩‍⚕️ Dr. Gershia Borges<br />
+          🔹 MBBS, MS (OBGyn), FMAS, DMAS<br />
+          🔹 Passionate OB-GYN Specialist<br />
+          🔹 Women&apos;s Health Advocate<br />
+          🔹 Minimally Invasive Surgery Expert<br />
+          🌟 Empowering Women Every Day<br />
+          📍 Goa<br />
+          💌 {siteConfig.links.email}<br />
+          Website: {siteConfig.links.websitelink}</p>
+        </div>
+
+        {/* Follow Button */}
+        <div className="p-4 text-center">
+          <a 
+            href="https://www.instagram.com/dr.wombmate?igsh=ampndmQ4d2dlcjA1" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full py-2 px-6 shadow-lg hover:bg-gradient-to-l transition duration-300"
+          >
+            <FaInstagram className="inline mr-2" /> Follow on Instagram
+          </a>
+        </div>
+        
+
+        {/* QR Code Button */}
+        <div className="p-4 text-center">
+          <Button
+            onPress={() => handleOpenQRCodeModal()}
+            className="bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full py-2 px-6 shadow-lg hover:bg-gradient-to-l transition duration-300"
+          >
+            Follow Using QR Code
+          </Button>
+        </div>
+      </div>
+
+      {/* Modal */}
+      <Modal isOpen={isQRCodeModalOpen} placement="center" onClose={onQRCodeModalClose}>
+        <ModalContent>
+          <ModalHeader className="flex flex-col gap-1">{siteConfig.nav_logo_name_small_devices} Instagram QR Code</ModalHeader>
+          <ModalBody>
+            <Image
+              width={400}
+              alt="QR Code"
+              src="/qrcode.jpg" // Replace with the actual URL of the QR code image
+            />
+          </ModalBody>
+          <ModalFooter>
+            <Button color="danger" variant="solid"  onPress={onQRCodeModalClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </section>
+
+        </div>
+      </section>
       <Divider className="my-4" />
 
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -302,76 +390,6 @@ export default function DocsPage() {
     </div>
   </div>
 </section>
-
-
- {/* Instagram Section  */}
-    <section className="flex flex-col items-center justify-center gap-6 py-8 md:py-10 bg-gray-50">
-      <div className="max-w-xs w-full bg-white shadow-lg rounded-lg overflow-hidden">
-        {/* Profile Picture with Instagram Story Outline */}
-        <div className="relative flex items-center justify-center mt-4 mb-2">
-          <div className="w-24 h-24 bg-gradient-to-r from-pink-800 to-red-800 rounded-full absolute"></div> {/* Instagram Story Outline */}
-          <img
-            src="/Dr.-Gershia-2.jpg" // Replace with the actual URL of the profile picture
-            alt="Profile"
-            className="w-24 h-24 object-cover rounded-full z-10"
-          />
-        </div>
-
-        {/* Username */}
-        <div className="text-center mb-4">
-          <p className="text-md text-gray-700 font-semibold">@dr.wombate</p>
-        </div>
-
-        {/* Bio Section */}
-        <div className="p-4 text-center">
-          <h3 className="text-xl font-semibold text-pink-500">Dr. Gershia Borges</h3>
-          <p className="text-md text-gray-700 mt-2">Gynaecologist & Obstetrician | Passionate about women&apos;s health. Sharing insights and updates on Instagram to empower and educate.</p>
-        </div>
-
-        {/* Follow Button */}
-        <div className="p-4 text-center">
-          <a 
-            href="https://www.instagram.com/dr.wombmate?igsh=ampndmQ4d2dlcjA1" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full py-2 px-6 shadow-lg hover:bg-gradient-to-l transition duration-300"
-          >
-            <FaInstagram className="inline mr-2" /> Follow on Instagram
-          </a>
-        </div>
-        
-
-        {/* QR Code Button */}
-        <div className="p-4 text-center">
-          <Button
-            onPress={onOpen}
-            className="bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full py-2 px-6 shadow-lg hover:bg-gradient-to-l transition duration-300"
-          >
-            Follow Using QR Code
-          </Button>
-        </div>
-      </div>
-
-      {/* Modal */}
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center">
-        <ModalContent>
-          <ModalHeader className="flex flex-col gap-1">{siteConfig.nav_logo_name_small_devices} Instagram QR Code</ModalHeader>
-          <ModalBody>
-            <Image
-              width={450}
-              alt="QR Code"
-              src="/qrcode.jpg" // Replace with the actual URL of the QR code image
-            />
-          </ModalBody>
-          <ModalFooter>
-            <Button color="danger" variant="solid"  onPress={onClose}>
-              Close
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
-    </section>
-
         
     </DefaultLayout>
   );

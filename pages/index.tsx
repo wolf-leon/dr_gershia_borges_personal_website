@@ -1,5 +1,5 @@
 "use client";
-import { Link,Snippet, Divider,button as buttonStyles } from "@nextui-org/react";
+import { Link,Snippet, Divider,button as buttonStyles, Image, Button } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
@@ -168,17 +168,29 @@ export default function IndexPage() {
         speed="slow"
       />
       <br />
-      <div className="text-center my-6">
-        <a 
+      <div className="text-center my-8">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+        <a
           href="https://g.co/kgs/yN4SR4u"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-blue-500 text-white rounded-full py-2 px-4 shadow-lg hover:bg-blue-600 transition duration-300"
         >
-          <FaGoogle className="text-xl" />
-          Read Reviews on Google
+          <Button color="primary" variant="bordered" className="w-full md:w-auto">
+            Read Reviews on <Image src="/google.svg" width={80} height={80} alt="Google" />
+          </Button>
+        </a>
+
+        <a
+          href="https://g.co/kgs/yN4SR4u"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button color="primary" variant="shadow" className="w-full md:w-auto">
+            Read Reviews on <Image src="/practo.svg" width={80} height={80} alt="Practo" />
+          </Button>
         </a>
       </div>
+    </div>
       <Divider className="my-4" />
 
 
