@@ -371,31 +371,36 @@ export default function DocsPage() {
     </section>
     <Divider className="my-4" />
 
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-  <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center">Highlights</h2>
-  <br />
-  <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl">
-    <div className="md:w-1/2 flex justify-center">
-      <img src="/highligt.jpg" alt="Baby" className="w-full h-auto max-w-sm rounded-lg" />
-    </div>
-    <div className="md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
-      <p className="text-lg text-center md:text-left mt-5">
-        {siteConfig.nav_logo_name} led an enlightening Breast Cancer & Cervical Cancer Awareness Talk, in collaboration with BJP Mahila Morcha, at Rukhmani Hall, Ponda. The event, attended by over 500 individuals, was a significant milestone in spreading awareness about these crucial health issues.
+
+{/* Gallery Section */}
+
+<section className="flex flex-wrap justify-center gap-4 py-8 md:py-10">
+<div className="md:w-1/2 flex flex-col justify-center items-center md:text-center">
+      <h2 className="text-3xl font-bold text-pink-500 max-w-4xl text-center justify-center items-center">Highlights of Commitment to Women&apos;s Health</h2>
+      <p className="text-lg text-center md:mt-5">
+      Explore moments from various initiatives and engagements where {siteConfig.nav_logo_name_small_devices} has actively contributed to advancing women&apos;s health. It captures her participation in health checkups, educational talks, and community events, underscoring her commitment to enhancing the well-being of women and imparting knowledge for their safe health.
       </p>
       <br></br>
-      <Link
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href="https://www.facebook.com/victorhospitalgoa/posts/961810859287597/?_rdr"
-            target="_blank"
-          >
-            <FaFacebook className="w-6 h-6 mr-2" />
-            See Post on Facebook
-          </Link>
-    </div>
+  </div>
+  <div className="flex flex-wrap justify-center gap-8 max-w-6xl">
+    {[
+      "/highligt.jpg",
+      "/highlight-1.jpeg",
+      "/highlight-2.jpeg",
+      "/highlight-3.jpeg",
+      "/highlight-7.jpeg",
+      "/highlight-5.jpeg",
+      "/highlight-4.jpeg",
+    ].map((src, index) => (
+      <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-2 flex justify-center">
+        <Image
+        isZoomed
+        alt={`Gallery image ${index + 1}`}
+        src={src}
+        className="w-full h-auto max-w-xl rounded-xl"
+      />
+      </div>
+    ))}
   </div>
 </section>
         
