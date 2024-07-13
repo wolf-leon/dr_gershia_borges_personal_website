@@ -35,7 +35,7 @@ export default function AboutPage() {
                 {siteConfig.nav_logo_name_small_devices} is a certified and experienced gynecologist and obstetrician. She is registered with the Medical Council of India.She completed her MBBS degree and MS (Obstetrics & Gynecology) at St. John&apos;s Medical College, Bangalore. 
               </p>
               <p className="mt-2 text-gray-600">
-              {siteConfig.nav_logo_name_small_devices} has worked extensively in India, gaining expertise in managing complex pregnancies, infertility treatments, and advanced laparoscopic surgeries. She is a registered Laparoscopic Surgeon endorsed by the World Association of Laparoscopic Surgeons for Advancing Minimally Invasive Surgery. She has Worked and is Currently Practising in Victor Hospital,Goa.
+              {siteConfig.nav_logo_name_small_devices} has worked extensively in India, gaining expertise in managing complex pregnancies, infertility treatments, and advanced laparoscopic surgeries. She is a registered Laparoscopic Surgeon endorsed by the World Association of Laparoscopic Surgeons for Advancing Minimally Invasive Surgery.
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
             <div className="mt-4 p-4 border rounded-lg text-gray-700 bg-gray-50">
               {aimSection === 'Expertise' && (
                 <p>
-                 {siteConfig.nav_logo_name_small_devices} has worked extensively in India, where she has honed her expertise in managing complex pregnancies, infertility treatments, and advanced laparoscopic surgeries. As a highly skilled professional, she is a registered Laparoscopic Surgeon endorsed by the World Association of Laparoscopic Surgeons for Advancing Minimally Invasive Surgery, a testament to her dedication to cutting-edge surgical techniques. Dr. Borges has gained invaluable experience through her work in various renowned institutions across the country. She is currently practicing at Victor Hospital in Goa, where she continues to provide exceptional care and innovative solutions to her patients.
+                 {siteConfig.nav_logo_name_small_devices} has worked extensively in India, where she has honed her expertise in managing complex pregnancies, infertility treatments, and advanced laparoscopic surgeries. As a highly skilled professional, she is a registered Laparoscopic Surgeon endorsed by the World Association of Laparoscopic Surgeons for Advancing Minimally Invasive Surgery, a testament to her dedication to cutting-edge surgical techniques. Dr. Borges has gained invaluable experience through her work in various renowned institutions across the country. {siteConfig.nav_logo_name_small_devices} continues to provide exceptional care and innovative solutions to her patients.
                 </p>
               )}
               {aimSection === 'Vision' && (

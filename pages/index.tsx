@@ -46,7 +46,7 @@ export default function IndexPage() {
     </div>
 
     <div className="text-center md:text-left md:w-1/2">
-      <p className="text-md text-center mt-5">Dr. Gershia Borges is a Gynaecologist and Obstetrician currently working at Victor Hospital, Goa. She has completed her MBBS, MS (OBGyn), FMAS, and DMAS from St. John&apos;s University in Karnataka. She is also a skilled Laparoscopic Surgeon.</p>
+      <p className="text-md text-center mt-5">Dr. Gershia Borges is a  Obstetrician and Gynaecologist and Laparoscopic Surgeon having obtained her post graduation in MS (OBGyn) from the prestigious St. John&apos;s Medical College,Bangalore. She is also a trained Laparoscopic Surgeon from World Laparoscopy Hospital.</p>
       <p className="text-md text-center mt-5">With a passion for understanding her patients, Dr. Gershia aims to provide the highest quality care. She believes that every woman deserves access to the best medical expertise to enhance their quality of life.</p>
       <p className="text-md text-center mt-5">Dr. Gershia remains a &apos;forever student,&apos; continually expanding her knowledge in gynaecology and obstetrics. She is committed to staying updated with the latest advancements in her field through ongoing training and professional development.</p>
     </div>

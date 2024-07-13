@@ -12,7 +12,7 @@ export default function ContactPage() {
           <h1 className="text-3xl font-bold text-pink-500">Contact</h1>
           <br />
           <h4 className={subtitle({ class: "mt-4" })}>
-            {siteConfig.nav_logo_name_small_devices} currently works and is associated with Victor Hospital Goa. For availability, contact on any one of the following:
+            For availability and appointment, contact {siteConfig.nav_logo_name_small_devices} on any one of the following:
           </h4>
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-20">
             <div className="flex flex-col items-center p-4 md:p-6">

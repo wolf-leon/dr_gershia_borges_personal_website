@@ -70,6 +70,14 @@ export default function DocsPage() {
       title: "Health Checkup", 
       body: "Woman health check-up is a comprehensive medical evaluation aimed at assessing and promoting overall health and well-being in women. It typically includes a review of medical history, physical examination, and screening tests for common health issues that affect women, such as breast cancer, cervical cancer, osteoporosis, and cardiovascular disease. Depending on individual risk factors and age, additional tests or evaluations may be recommended, such as mammograms, bone density scans, cholesterol screenings, or pelvic exams. Women health check-ups are important for early detection of health problems, prevention of disease, and promotion of healthy lifestyle behaviors."
     },
+    { 
+      title: "Pregnancy care", 
+      body: "Pregnancy care involves regular prenatal check-ups to monitor the health of both the mother and the developing baby, ensuring proper growth and development through routine ultrasounds and tests. It includes maintaining a balanced diet rich in essential nutrients, staying physically active with appropriate exercises, and avoiding harmful substances such as alcohol and tobacco. Emotional support and education on childbirth and parenting are also crucial aspects of comprehensive pregnancy care, helping to prepare for a healthy delivery and postpartum recovery."
+    },
+    { 
+      title: "Endometriosis", 
+      body: "Endometriosis is a chronic condition where tissue similar to the lining of the uterus grows outside the uterine cavity, commonly affecting the ovaries, fallopian tubes, and pelvic lining. This can lead to severe pelvic pain, especially during menstruation, and may cause fertility issues. Management of endometriosis often involves pain relief through medications, hormonal therapies to limit endometrial growth, and sometimes surgical interventions to remove the abnormal tissue."
+    },
     
   ];
   
@@ -92,7 +100,7 @@ export default function DocsPage() {
     </div>
 
     <div className="text-center md:text-left md:w-1/2">
-      <p className="text-md mt-5">Dr. Gershia Borges is a dedicated Gynaecologist and Obstetrician currently practicing at Victor Hospital, Goa. With an impressive educational background including an MBBS, MS (OBGyn), FMAS, and DMAS from St. John&apos;s University in Karnataka, she is also a highly skilled Laparoscopic Surgeon.</p>
+      <p className="text-md mt-5">Dr. Gershia Borges is a  Obstetrician and Gynaecologist and Laparoscopic Surgeon having obtained her post graduation in MS (OBGyn) from the prestigious St. John&apos;s Medical College,Bangalore. She is also a trained Laparoscopic Surgeon from World Laparoscopy Hospital.</p>
       <p className="text-md mt-5">Her passion for patient care drives Dr. Gershia to deliver the highest quality medical services. She is committed to ensuring that every woman receives the best medical expertise to improve their overall quality of life.</p>
       <p className="text-md mt-5">Continuing her education is a priority for Dr. Gershia, who remains a &apos;forever student&apos; in the fields of gynaecology and obstetrics. Her rigorous training and qualifications enable her to provide the latest, evidence-based treatments to her patients, ensuring they benefit from proven and effective medical practices.</p>
       <p className="text-md mt-5">Dr. Gershia also values the importance of a holistic approach to healthcare. She works closely with her patients to address not only their immediate medical needs but also their emotional and psychological well-being. By fostering a supportive and compassionate environment, she ensures that each patient feels heard and cared for throughout their treatment journey.</p>
@@ -119,7 +127,7 @@ export default function DocsPage() {
         <h2 className="text-3xl font-bold text-pink-500 text-center">Professional Work Expertise</h2>
         <div className="max-w-4xl text-center">
         <p className="text-lg text-center mt-5">
-          {siteConfig.nav_logo_name_small_devices} has extensive expertise in various areas of gynecology and obstetrics, providing comprehensive care for women&apos;s health. She currently practices at Victor Hospital, Margao, Goa. Her professional work expertise includes:
+          {siteConfig.nav_logo_name_small_devices} has extensive expertise in various areas of gynecology and obstetrics, providing comprehensive care for women&apos;s health. Her professional work expertise includes:
         </p>
         </div>
         <br />
