@@ -171,7 +171,7 @@ export default function IndexPage() {
       <div className="text-center my-8">
       <div className="flex flex-col md:flex-row justify-center items-center gap-4">
         <a
-          href="https://g.co/kgs/yN4SR4u"
+          href="https://www.google.com/search?q=Dr.+Gershia+Borges&safe=active&sca_esv=a7832ba1abb84101&sca_upv=1&hl=en-IN&ei=CRHKZuulBfqY4-EP_oS8IQ&ved=0ahUKEwirzsPTjI6IAxV6zDgGHX4CLwQQ4dUDCA8&uact=5&oq=Dr.+Gershia+Borges&gs_lp=Egxnd3Mtd2l6LXNlcnAiEkRyLiBHZXJzaGlhIEJvcmdlczIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBEjKClDCA1jqBXACeACQAQCYAZMBoAGhAqoBAzAuMrgBA8gBAPgBAZgCAqACqgKYAwCIBgGSBwMwLjKgB4ME&sclient=gws-wiz-serp"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -181,7 +181,7 @@ export default function IndexPage() {
         </a>
 
         <a
-          href="https://g.co/kgs/yN4SR4u"
+          href="https://www.google.com/search?q=Dr.+Gershia+Borges&safe=active&sca_esv=a7832ba1abb84101&sca_upv=1&hl=en-IN&ei=CRHKZuulBfqY4-EP_oS8IQ&ved=0ahUKEwirzsPTjI6IAxV6zDgGHX4CLwQQ4dUDCA8&uact=5&oq=Dr.+Gershia+Borges&gs_lp=Egxnd3Mtd2l6LXNlcnAiEkRyLiBHZXJzaGlhIEJvcmdlczIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBEjKClDCA1jqBXACeACQAQCYAZMBoAGhAqoBAzAuMrgBA8gBAPgBAZgCAqACqgKYAwCIBgGSBwMwLjKgB4ME&sclient=gws-wiz-serp"
           target="_blank"
           rel="noopener noreferrer"
         >
